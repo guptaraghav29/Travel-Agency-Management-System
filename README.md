@@ -33,21 +33,17 @@
 * Project IO:
 	* Input: Customer’s and Travel Agent’s names and basic information, Vacation location, Travel Itinerary describing the places to go to and what day, as well as lodging accommodations  
  
-	* Output: Creates 2 files - one containing customer's information and Travel Agent’s name and contact information
+	* Output: Creates 2 files:
+		 * One containing customer's information and Travel Agent’s name and contact information.
 		 * A second file with the Travel Itinerary for the customer’s use
 
 * 3 Design Patterns We’ll Be Implementing:
-	* Abstract factory:
-		* Creating related and dependent objects
-		* Vehicles: Planes, cars, boats, etc. 
-		* Overnight Accommodations: Hotels, motels
- 	* Visitor:
-		* Lets us define a new operation without changing the classes of the elements on which it operates 
-	* Decorator:
-		* Lets us add responsibilities to a specific object instead of the whole class
-
-
-
+	* Abstract factory 
+		* Abstract factory is great as it allows us to be able to create related and dependent objects. For example, he can have objects like vehicles (cars, planes, boats, etc.) which are all related, but the children objects (type of vehicles) have a dependency on the parent vehicle class for a functionality perhaps. We could also have classes for overnight accommodations such as hotels, motels, etc.
+	* Visitor
+		* The visitor design pattern allows us to have greater encapsulation and define a new operation without changing the classes of the elements on which it operates. It also adds ease when wanting to define new operations throughout the lifecycle of the program. Visitor design pattern also reduces code footprint by allowing us to use it only in the classes we need to use them in.
+	* Decorator
+		* Allows us to add responsibilities to a specific object instead of the whole class. Also known as a wrapper, and will give us great flexibility when it comes to specific objects that just don’t need a change that’s for all of the objects. We can also nest decorators recursively, giving us options to add an unlimited amount of added responsibilities. 
 
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to 
