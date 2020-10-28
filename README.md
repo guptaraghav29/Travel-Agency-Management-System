@@ -4,8 +4,8 @@
  # Travel Agency Management System
  > Your author list below should include links to all members GitHub and should begin with a "\<" (remove existing author).
  
- > Authors: \<[Pranathi Darbhala](https://github.com/pdarb)\>
- > \<[Raghav Gupta](https://github.com/guptaraghav29)\>  \<[Lawrence Wang](https://github.com/LawrenceGWang)\>
+ Authors: \<[Pranathi Darbhala](https://github.com/pdarb)\>
+ \<[Raghav Gupta](https://github.com/guptaraghav29)\>  \<[Lawrence Wang](https://github.com/LawrenceGWang)\>
  
  > You will be forming a group of **THREE** students and work on an interesting project that you will propose yourself (in this `README.md` document). You can pick any project that you'd like, but it needs ot implement three design patterns. Each of the members in a group is expected to work on at least one design pattern and its test cases. You can, of course, help each other, but it needs to be clear who will be responsible for which pattern and for which general project features.
  
@@ -17,6 +17,7 @@
  > * You can incorporate additional technologies/tools but they must be approved (in writing) by the instructor or the TA.
  > * Each member of the group **must** be committing code regularly and make sure their code is correctly attributed to them. We will be checking attributions to determine if there was equal contribution to the project.
 
+
 ## Project Description
  > Your project description should summarize the project you are proposing. Be sure to include
  > * Why is it important or interesting to you?
@@ -26,6 +27,25 @@
  > * What are the three design patterns you will be using. For each design pattern you must:
  >   * Explain in 3 - 5 sentences why you picked this pattern and what feature you will implement with it
  > * This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
+
+* Traveling is very important and interesting to us. As we are well aware, this pandemic has affected our normal travel patterns during vacations or even-day trips to different cities, mountains, and beaches. We miss traveling and can’t wait to get back to it and so we wanted to help our fellow travel agents out by making them a system to easily make and manage their travel arrangements for their respective clientele.
+* We plan to use C++ to build our travel agency management system application. If possible, we would like to have a front-end GUI that would be a way for clients to place their travel accommodations. This would be done in primarily HTML, CSS, and JavaScript but we’ll only be thinking about implementing this feature if time permits.
+* Project IO:
+	* Input:
+ 
+	* Output:
+* 3 Design Patterns We’ll Be Implementing:
+	* Abstract factory:
+		* Creating related and dependent objects
+		* Vehicles: Planes, cars, boats, etc. 
+		* Overnight Accommodations: Hotels, motels
+ 	* Visitor:
+		* Lets us define a new operation without changing the classes of the elements on which it operates 
+	* Decorator:
+		* Lets us add responsibilities to a specific object instead of the whole class
+
+
+
 
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to 
