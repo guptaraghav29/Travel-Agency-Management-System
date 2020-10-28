@@ -34,7 +34,7 @@
 	* Input: Customer’s and Travel Agent’s names and basic information, Vacation location, Travel Itinerary describing the places to go to and what day, as well as lodging accommodations  
  
 	* Output: Creates 2 files - one containing customer's information and Travel Agent’s name and contact information
-                * A second file with the Travel Itinerary for the customer’s use
+		 * A second file with the Travel Itinerary for the customer’s use
 
 * 3 Design Patterns We’ll Be Implementing:
 	* Abstract factory:
