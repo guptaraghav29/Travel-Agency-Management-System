@@ -31,9 +31,11 @@
 * Traveling is very important and interesting to us. As we are well aware, this pandemic has affected our normal travel patterns during vacations or even-day trips to different cities, mountains, and beaches. We miss traveling and can’t wait to get back to it and so we wanted to help our fellow travel agents out by making them a system to easily make and manage their travel arrangements for their respective clientele.
 * We plan to use C++ to build our travel agency management system application. If possible, we would like to have a front-end GUI that would be a way for clients to place their travel accommodations. This would be done in primarily HTML, CSS, and JavaScript but we’ll only be thinking about implementing this feature if time permits.
 * Project IO:
-	* Input:
+	* Input: Customer’s and Travel Agent’s names and basic information, Vacation location, Travel Itinerary describing the places to go to and what day, as well as lodging accommodations  
  
-	* Output:
+	* Output: Creates 2 files - one containing customer's information and Travel Agent’s name and contact information
+                * A second file with the Travel Itinerary for the customer’s use
+
 * 3 Design Patterns We’ll Be Implementing:
 	* Abstract factory:
 		* Creating related and dependent objects
