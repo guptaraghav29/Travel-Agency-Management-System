@@ -19,15 +19,6 @@
 
 
 ## Project Description
- > Your project description should summarize the project you are proposing. Be sure to include
- > * Why is it important or interesting to you?
- > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
- >   * [toolname](link) - Short description
- > * What will be the input/output of your project?
- > * What are the three design patterns you will be using. For each design pattern you must:
- >   * Explain in 3 - 5 sentences why you picked this pattern and what feature you will implement with it
- > * This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
-
 * Traveling is very important and interesting to us. As we are well aware, this pandemic has affected our normal travel patterns during vacations or even-day trips to different cities, mountains, and beaches. We miss traveling and can’t wait to get back to it and so we wanted to help our fellow travel agents out by making them a system to easily make and manage their travel arrangements for their respective clientele.
 * We plan to use C++ to build our travel agency management system application. If possible, we would like to have a front-end GUI that would be a way for clients to place their travel accommodations. This would be done in primarily HTML, CSS, and JavaScript but we’ll only be thinking about implementing this feature if time permits.
 * Project IO:
