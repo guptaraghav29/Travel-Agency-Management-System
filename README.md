@@ -7,7 +7,8 @@
  Authors: \<[Pranathi Darbhala](https://github.com/pdarb)\>
  \<[Raghav Gupta](https://github.com/guptaraghav29)\>  \<[Lawrence Wang](https://github.com/LawrenceGWang)\>
  
-<!-- > You will be forming a group of **THREE** students and work on an interesting project that you will propose yourself (in this `README.md` document). You can pick any project that you'd like, but it needs ot implement three design patterns. Each of the members in a group is expected to work on at least one design pattern and its test cases. You can, of course, help each other, but it needs to be clear who will be responsible for which pattern and for which general project features.
+<!-- 
+> You will be forming a group of **THREE** students and work on an interesting project that you will propose yourself (in this `README.md` document). You can pick any project that you'd like, but it needs ot implement three design patterns. Each of the members in a group is expected to work on at least one design pattern and its test cases. You can, of course, help each other, but it needs to be clear who will be responsible for which pattern and for which general project features.
  
  > ## Expectations
  > * Incorporate **three** distinct design patterns, *two* of the design patterns need to be taught in this course:
@@ -15,7 +16,8 @@
  > * All three design patterns need to be linked together (it can't be three distinct projects)
  > * Your project should be implemented in C/C++. If you wish to choose anoher programming language (e.g. Java, Python), please discuss with your lab TA to obtain permission.
  > * You can incorporate additional technologies/tools but they must be approved (in writing) by the instructor or the TA.
- > * Each member of the group **must** be committing code regularly and make sure their code is correctly attributed to them. We will be checking attributions to determine if there was equal contribution to the project. -->
+ > * Each member of the group **must** be committing code regularly and make sure their code is correctly attributed to them. We will be checking attributions to determine if there was equal contribution to the project. 
+ -->
 
 
 ## Project Description
@@ -30,12 +32,12 @@
 
 * 3 Design Patterns We’ll Be Implementing:
 	* Abstract factory 
-		* Abstract factory is great as it allows us to be able to create related and dependent objects. For example, he can have objects like vehicles (cars, planes, boats, etc.) which are all related, but the children objects (type of vehicles) have a dependency on the parent vehicle class for a functionality perhaps. We could also have classes for overnight accommodations such as hotels, motels, etc.
+		* Abstract factory is great as it allows us to be able to create related and dependent objects. This design pattern makes it easy for us to create groups of objects such as different combinations of transportation type and ticket class.
 	* Visitor
-		* The visitor design pattern allows us to have greater encapsulation and define a new operation without changing the classes of the elements on which it operates. It also adds ease when wanting to define new operations throughout the lifecycle of the program. Visitor design pattern also reduces code footprint by allowing us to use it only in the classes we need to use them in.
+		* The visitor design pattern allows us to have greater encapsulation and define a new operation without changing the classes of the elements on which it operates. We will use this pattern to make it easy to calculate service fees for our company. For example, the fees during a special deal sale will be lower than normal which will end up lowering the overall price of the travel package. The visitor pattern makes it easy for us to create different ways to calculate commission.
 	* Decorator
-		* Allows us to add responsibilities to a specific object instead of the whole class. Also known as a wrapper, and will give us great flexibility when it comes to specific objects that just don’t need a change that’s for all of the objects. We can also nest decorators recursively, giving us options to add an unlimited amount of added responsibilities. 
-
+		* Allows us to add responsibilities to a specific object instead of the whole class. Also known as a wrapper, and will give us great flexibility when it comes to specific objects that just don’t need a change that’s for all of the objects. The decorator is used to add additional information to points of interest that need it. Since points of interest have large amounts of variation, the decorator makes it possible to add information to points when it is needed.
+<!--
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to 
  > * Set up your GitHub project board as a Kanban board for the project. It should have columns that map roughly to 
@@ -46,9 +48,15 @@
  > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
  >   * Create smaller development tasks as issues and assign them to team members. Place these in the `Backlog` column.
  >   * These cards should represent roughly 7 days worth of development time for your team, taking you until your first meeting with the TA
+ -->
 ## Class Diagram
  ![OMT class diagram](/omt_diagram.png)
+ * The visitor design pattern is used to create groups of transportation and ticket classes
+ * The decorator design pattern is used to add additional information to points of interest should they need it
+ * The visitor design pattern is used to caluclate commission differently based on the package without needing to add extra methods to the existing classes for each new commission calculation
+ <!--
  > Include a class diagram(s) for each design pattern and a description of the diagram(s). This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper OMT notation (as discussed in the course slides). You may combine multiple design patterns into one diagram if you'd like, but it needs to be clear which portion of the diagram represents which design pattern (either in the diagram or in the description). 
+ -->
  
  > ## Phase III
  > You will need to schedule a check-in with the TA (during lab hours or office hours). Your entire team must be present. 
