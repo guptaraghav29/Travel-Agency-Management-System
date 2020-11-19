@@ -51,7 +51,7 @@
  -->
 ## Class Diagram
  ![OMT class diagram](/omt_diagram.png)
- * The visitor design pattern is used to create groups of transportation and ticket classes
+ * The abstract factory design pattern is used to create groups of transportation and ticket classes
  * The decorator design pattern is used to add additional information to points of interest should they need it
  * The visitor design pattern is used to caluclate commission differently based on the package without needing to add extra methods to the existing classes for each new commission calculation
  <!--
