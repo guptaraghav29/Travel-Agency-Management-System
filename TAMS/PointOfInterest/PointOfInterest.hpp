@@ -2,54 +2,81 @@
 #define __POINTOFINTEREST_HPP__
 
 #include <iostream>
+#include <string>
+#include "../Price/PriceVisitor.hpp"
 
 class PointOfInterest {
-    private:
+    protected:
+        std::string name;
+        std::string type;
+        double price;
     public:
-        PointOfInterest() { };
+        PointOfInterest() { }
+        PointOfInterest(std::string n, std::string t, double p) : name(n), type(t), price(p) { };
         virtual std::string getInfo() = 0;
         virtual double getPrice() = 0;
+        void print();
+        void accept(PriceVisitor* visitor);
 };
 
-class BasicPOI : public PointOfInterest {
+class GenericPOI : public PointOfInterest {
     private:
     public:
-        BasicPOI();
+        GenericPOI(std::string n, std::string t, double p) : PointOfInterest(n, t, p) { };
         std::string getInfo();
         double getPrice();
 };
 
-class POIDecorator : public PointOfInterest {
-    private:
+class InfoDecorator : public PointOfInterest {
+    protected:
         PointOfInterest* poi;
     public:
-        POIDecorator(PointOfInterest* point) : poi(point) { };
-        std::string getInfo();
+        InfoDecorator(PointOfInterest* point) : poi(point) { };
+        ~InfoDecorator() { delete poi; }
+        virtual std::string getInfo() = 0;
         double getPrice();
 };
 
-class FoodEstablishment : public POIDecorator {
+class PhoneDecorator : public InfoDecorator {
     private:
+        std::string number;
     public:
-        FoodEstablishment(PointOfInterest* point) : POIDecorator(point) { };
+        PhoneDecorator(PointOfInterest* point, std::string n) : InfoDecorator(point), number(n) { };
         std::string getInfo();
-        double getPrice();
 };
 
-class Viewpoint : public POIDecorator {
+class DescriptionDecorator : public InfoDecorator {
     private:
+        std::string description;
     public:
-        Viewpoint(PointOfInterest* point) : POIDecorator(point) { };
+        DescriptionDecorator(PointOfInterest* point, std::string d) : InfoDecorator(point), description(d) { };
         std::string getInfo();
-        double getPrice();
 };
 
-class HistoricSite : public POIDecorator {
+class RatingDecorator : public InfoDecorator {
     private:
+        double rating;
     public:
-        HistoricSite(PointOfInterest* point) : POIDecorator(point) { };
+        RatingDecorator(PointOfInterest* point, double r) : InfoDecorator(point), rating(r) { };
         std::string getInfo();
-        double getPrice();
 };
+
+class AddressDecorator : public InfoDecorator {
+    private:
+        std::string address;
+    public:
+        AddressDecorator(PointOfInterest* point, std::string a) : InfoDecorator(point), address(a) { };
+        std::string getInfo();
+};
+
+class TimeDecorator : public InfoDecorator {
+    private:
+        std::string time;
+    public:
+        TimeDecorator(PointOfInterest* point, std::string t) : InfoDecorator(point), time(t) { };
+        std::string getInfo();
+};
+
+
 
 #endif //__POINTOFINTEREST_HPP__
