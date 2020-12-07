@@ -3,11 +3,12 @@
 
 #include "Route.hpp"
 #include "Ticket.hpp"
+#include <string>
 
 class TransportationFactory {
     public:
-        Route getRoute();
-        Ticket getTicket();
+        Route* getRoute();
+        Ticket* getTicket();
 
 };
 

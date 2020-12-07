@@ -3,15 +3,16 @@
 
 using namespace std;
 
-class Ticket {
-    private:
-        double price;
-        string seat;
+class Ticket
+{
+protected:
+    string seat;
 
-    public:
-        double getPrice();
-        void accept(visitor);
-
+public:
+    //virtual Ticket* getTicket() = 0;
+    virtual double multiplier() = 0;
+    virtual string getSeat() = 0;
+    // void accept();
 };
 
 #endif

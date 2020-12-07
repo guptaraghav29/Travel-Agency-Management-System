@@ -1,16 +1,37 @@
 #ifndef _CONCRETETICKET_HPP_
 #define _CONCRETETICKET_HPP_
 
-class Economy {
+#include "Ticket.hpp"
+#include <string>
+#include <iostream>
+using namespace std;
 
+class Economy : public Ticket
+{
+public:
+    virtual double multiplier()
+    {
+        return 1.0;
+    }
+
+    virtual string getSeat()
+    {
+        return seat;
+    }
 };
 
-class Premium {
+class First : public Ticket
+{
+public:
+    virtual double multiplier()
+    {
+        return 2.0;
+    }
 
-};
-
-class First {
-
+    virtual string getSeat()
+    {
+        return seat;
+    }
 };
 
 #endif
