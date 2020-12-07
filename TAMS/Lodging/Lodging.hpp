@@ -20,6 +20,17 @@ protected:
     double price;
 
 public:
+    Lodging(string typeOfLodging, string address, double rating, vector<string> amenities, string phoneNumber, vector<string> dining,  double price) 
+    {
+        this->typeOfLodging = typeOfLodging;
+        this->address = address;
+        this->rating = rating;
+        this->amenities = amenities;
+        this->phoneNumber = phoneNumber;
+        this->dining = dining;
+        this->price = price;
+    }
+
     void getDetails()
     {
         cout << "Address: " << address << endl;
