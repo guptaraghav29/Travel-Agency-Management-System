@@ -9,28 +9,28 @@ using namespace std;
 class Economy : public Ticket
 {
 public:
-    virtual double multiplier()
+    double multiplier()
     {
         return 1.0;
     }
 
-    virtual string getSeat()
+    string getSeatNum()
     {
-        return seat;
+        return seat_num;
     }
 };
 
 class First : public Ticket
 {
 public:
-    virtual double multiplier()
+    double multiplier()
     {
         return 2.0;
     }
 
-    virtual string getSeat()
+    string getSeatNum()
     {
-        return seat;
+        return seat_num;
     }
 };
 

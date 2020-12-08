@@ -6,12 +6,11 @@ using namespace std;
 class Ticket
 {
 protected:
-    string seat;
+    string seat_num;
 
 public:
-    //virtual Ticket* getTicket() = 0;
     virtual double multiplier() = 0;
-    virtual string getSeat() = 0;
+    virtual string getSeatNum() = 0;
     // void accept();
 };
 
