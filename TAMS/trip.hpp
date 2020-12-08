@@ -1,6 +1,8 @@
 #include "PointOfInterest/POIFactory.hpp"
 #include "Price/PriceVisitor.hpp"
 #include "Transportation/TransportationFactory.hpp"
+#include "Lodging/LodgingFactory.hpp"
+#include "utility.hpp"
 #include <vector>
 
 class Trip

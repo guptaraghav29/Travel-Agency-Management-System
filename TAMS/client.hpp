@@ -1,11 +1,11 @@
 #include <vector>
+#include "utility.hpp"
 #include "trip.hpp"
 
 class Client
 {
     private:
         vector<Trip*> trips;
-        int choice(int, int);
     public:
         ~Client();
         void run();
