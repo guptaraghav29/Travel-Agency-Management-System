@@ -1,15 +1,15 @@
 #include "PriceVisitor.hpp"
 
-double PriceVisitor::getTotalPrice() { return totalPrice; };
+double PriceVisitor::getTotalPrice() { return total_price; };
 
-virtual void StandardPrice::visit(PointOfInterest* poi) override { totalPrice += poi->getPrice() * 1.10; }
-virtual void StandardPrice::visit(Lodging* lod) override { totalPrice += lod->getPrice() * 1.10; }
-virtual void StandardPrice::visit(Ticket* tic) override { totalPrice += tic->getPrice() * 1.10; }
+void StandardPrice::visit(PointOfInterest* poi) { total_price += poi->getPrice() * 1.10; }
+void StandardPrice::visit(Lodging* lod) { total_price += lod->getPrice() * 1.10; }
+void StandardPrice::visit(Transportation* tra) { total_price += tra->getPrice() * 1.10; }
 
-virtual void CheapPrice::visit(PointOfInterest* poi) override { totalPrice += poi->getPrice() * 1.05; }
-virtual void CheapPrice::visit(Lodging* lod) override { totalPrice += lod->getPrice() * 1.05; }
-virtual void CheapPrice::visit(Ticket* tic) override { totalPrice += tic->getPrice() * 1.05; }
+void CheapPrice::visit(PointOfInterest* poi) { total_price += poi->getPrice() * 1.05; }
+void CheapPrice::visit(Lodging* lod) { total_price += lod->getPrice() * 1.05; }
+void CheapPrice::visit(Transportation* tra) { total_price += tra->getPrice() * 1.05; }
 
-virtual void ExpensivePrice::visit(PointOfInterest* poi) override { totalPrice += poi->getPrice() * 1.15; }
-virtual void ExpensivePrice::visit(Lodging* lod) override { totalPrice += lod->getPrice() * 1.15; }
-virtual void ExpensivePrice::visit(Ticket* tic) override { totalPrice += tic->getPrice() * 1.15; }
+void ExpensivePrice::visit(PointOfInterest* poi) { total_price += poi->getPrice() * 1.15; }
+void ExpensivePrice::visit(Lodging* lod) { total_price += lod->getPrice() * 1.15; }
+void ExpensivePrice::visit(Transportation* tra) { total_price += tra->getPrice() * 1.15; }
