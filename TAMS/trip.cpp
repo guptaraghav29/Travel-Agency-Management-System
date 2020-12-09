@@ -4,7 +4,7 @@ Trip::Trip()
 {
     std::cout << "Enter trip name: ";
     std::getline(std::cin, name);
-    std::cout << "Choose pricing type:\n1. Normal (10% commission)\n2. Cheap (5% commission)\n3. Expensive (15% commission)";
+    std::cout << "\nChoose pricing type:\n1. Normal (10% commission)\n2. Cheap (5% commission)\n3. Expensive (15% commission)\n";
     switch (choice(1, 3))
     {
     case 1:
@@ -103,28 +103,37 @@ void Trip::printName()
 void Trip::printInfo()
 {
     std::cout << "Transportation:\n";
-    for (auto t : transportation)
-    {
-        t->getInfo();
-        visitor->visit(t);
-    }
+    if (transportation.empty())
+        std::cout << "None\n";
+    else
+        for (auto t : transportation)
+        {
+            t->getInfo();
+            visitor->visit(t);
+        }
     std::cout << '\n';
 
     std::cout << "Points of Interest:\n";
-    for (auto p : points)
-    {
-        std::cout << p->getInfo() << '\n';
-        std::cout << "Price: " << p->getPrice() << '\n';
-        visitor->visit(p);
-    }
+    if (points.empty())
+        std::cout << "None\n";
+    else
+        for (auto p : points)
+        {
+            std::cout << p->getInfo() << '\n';
+            std::cout << "Price: " << p->getPrice() << '\n';
+            visitor->visit(p);
+        }
     std::cout << '\n';
 
     std::cout << "Lodging:\n";
-    for (auto l : lodging)
-    {
-        l->getDetails();
-        visitor->visit(l);
-    }
+    if (lodging.empty())
+        std::cout << "None\n";
+    else
+        for (auto l : lodging)
+        {
+            l->getDetails();
+            visitor->visit(l);
+        }
     std::cout << '\n';
     std::cout << "Total Price: " << visitor->getTotalPrice() << '\n';
 }

@@ -89,14 +89,14 @@ void Client::deleteTrip()
     {
         for (int i = 0; i < size; ++i)
         {
-            std::cout << "Trip " << i + 1 << ":\n";
+            std::cout << "Trip " << i + 1 << ": ";
             trips.at(i)->printName();
             std::cout << '\n';
         }
     }
 
     int index = choice(1, trips.size());
-    delete trips.at(index);
+    delete trips.at(index - 1);
     trips.erase(trips.begin() + (index - 1));
 }
 
