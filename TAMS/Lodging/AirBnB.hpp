@@ -19,6 +19,41 @@ public:
         cout << "Lodging: " << typeOfLodging << endl;
         Lodging::getDetails();
     }
+
+    virtual string getTypeOfLodging()
+    {
+        return typeOfLodging;
+    };
+
+    virtual string getAddress()
+    {
+        return address;
+    };
+
+    virtual double getRating()
+    {
+        return rating;
+    };
+
+    virtual vector<string> getAmenities()
+    {
+        return amenities;
+    };
+
+    virtual string getPhoneNumber()
+    {
+        return phoneNumber;
+    };
+
+    virtual vector<string> getDining()
+    {
+        return dining;
+    };
+
+    virtual double getPrice()
+    {
+        return price;
+    };
 };
 
 #endif

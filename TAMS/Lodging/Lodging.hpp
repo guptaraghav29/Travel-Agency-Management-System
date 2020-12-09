@@ -20,7 +20,17 @@ protected:
     double price;
 
 public:
-    Lodging(string typeOfLodging, string address, double rating, vector<string> amenities, string phoneNumber, vector<string> dining,  double price) 
+     Lodging()
+    {
+        this->typeOfLodging = typeOfLodging;
+        this->address = address;
+        this->rating = rating;
+        this->amenities = amenities;
+        this->phoneNumber = phoneNumber;
+        this->dining = dining;
+        this->price = price;
+    }
+    Lodging(string typeOfLodging, string address, double rating, vector<string> amenities, string phoneNumber, vector<string> dining, double price)
     {
         this->typeOfLodging = typeOfLodging;
         this->address = address;
@@ -46,6 +56,41 @@ public:
         }
         cout << price << endl;
     }
+
+    virtual string getTypeOfLodging()
+    {
+        return typeOfLodging;
+    };
+
+    virtual string getAddress()
+    {
+        return address;
+    };
+
+    virtual double getRating()
+    {
+        return rating;
+    };
+
+    virtual vector<string> getAmenities()
+    {
+        return amenities;
+    };
+
+    virtual string getPhoneNumber()
+    {
+        return phoneNumber;
+    };
+
+    virtual vector<string> getDining()
+    {
+        return dining;
+    };
+
+    virtual double getPrice()
+    {
+        return price;
+    };
 };
 
 #endif
