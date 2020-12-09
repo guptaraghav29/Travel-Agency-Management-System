@@ -1,3 +1,6 @@
 [submodule "googletest"]
 	path = googletest
 	url = https://github.com/google/googletest.git
+[submodule "TAMS/Transportation/googletest"]
+	path = TAMS/Transportation/googletest
+	url = https://github.com/google/googletest.git

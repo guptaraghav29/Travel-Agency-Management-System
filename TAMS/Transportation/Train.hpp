@@ -1,5 +1,5 @@
-#ifndef _TRAINECONOMY_HPP_
-#define _TRAINECONOMY_HPP_
+#ifndef _TRAIN_HPP_
+#define _TRAIN_HPP_
 
 #include "Route.hpp"
 #include "Ticket.hpp"
@@ -9,13 +9,23 @@
 
 using namespace std;
 
-class TrainEconomy : public TransportationFactory {
+class Train : public TransportationFactory {
     public:
         Route* getRoute() {
             return new TrainRoute();
         }
         Ticket* getTicket(){
             return new Economy();
+        }
+};
+
+class TrainFirst : public TransportationFactory {
+    public:
+        Route* getRoute() {
+            return new TrainRoute();
+        }
+        Ticket* getTicket(){
+            return new First();
         }
 };
 

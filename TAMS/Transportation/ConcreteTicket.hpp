@@ -3,6 +3,7 @@
 
 #include "Ticket.hpp"
 #include <string>
+#include <stdlib.h>
 #include <iostream>
 using namespace std;
 
@@ -16,6 +17,7 @@ public:
 
     string getSeatNum()
     {
+        seat_num = to_string(rand() % 100 + 1);
         return seat_num;
     }
 };
@@ -30,6 +32,7 @@ public:
 
     string getSeatNum()
     {
+        seat_num = to_string(rand() % 100 + 1);
         return seat_num;
     }
 };
