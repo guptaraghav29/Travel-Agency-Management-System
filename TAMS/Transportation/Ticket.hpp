@@ -1,17 +1,17 @@
 #ifndef _TICKET_HPP_
 #define _TICKET_HPP_
 
+//#include "Transportation.hpp"
+
 using namespace std;
 
-class Ticket {
-    private:
-        double price;
-        string seat;
-
-    public:
-        double getPrice();
-        void accept(visitor);
-
+class Ticket
+{
+protected:
+    string seat_num;
+public:
+    virtual double multiplier() = 0;
+    virtual string getSeatNum() = 0;
 };
 
 #endif
