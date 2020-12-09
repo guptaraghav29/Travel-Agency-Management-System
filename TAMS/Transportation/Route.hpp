@@ -16,34 +16,47 @@ class Route {
         double distance;
 
     public:
-        Route() {}
-        void getInput() {
-            cout << "Enter origin: " << endl;
+        Route()
+        {
+            cout << "Enter origin (e.g, Los Angeles): " << endl;
             getline(cin, origin);
-            cout << "Enter destination: " << endl;
+            cout << "Enter destination (e.g, Paris): " << endl;
             getline(cin, destination);
-            cout << "Enter date: " << endl;
+            cout << "Enter date (e.g, 2020-12-25): " << endl;
             getline(cin, date);
-            cout << "Enter time: " << endl;
+            cout << "Enter time (e.g, 13:44): " << endl;
             getline(cin, time);
-            cout << "Enter company: " << endl;
+            cout << "Enter company (e.g., Amtrak, Qatar Airways): " << endl;
             getline(cin, company);
-            cout << "Enter duration: " << endl;
+            cout << "Enter duration minutes (e.g, 366): " << endl;
             cin >> duration;
-            cout << "Enter distance: " << endl;
+            cin.ignore();
+            cout << "Enter distance kilometers (e.g, 1759): " << endl;
             cin >> distance;
+            cin.ignore();
         }
 
-        Route(string origin, string destination, string date, string time, string company, double duration, double distance) {
-            this->origin = origin;
-            this->destination = destination;
-            this->date = date;
-            this->time = time;
-            this->company = company;
-            this->duration = duration;
-            this->distance = distance;
+        // Route(string origin, string destination, string date, string time, string company, double duration, double distance) {
+        //     this->origin = origin;
+        //     this->destination = destination;
+        //     this->date = date;
+        //     this->time = time;
+        //     this->company = company;
+        //     this->duration = duration;
+        //     this->distance = distance;
+        // }
+
+        void outputInfo()
+        {
+            cout << "origin: " << origin << endl;
+            cout << "destination: " << destination << endl;
+            cout << "date: " << date << endl;
+            cout << "time: " << time << endl;        
+            cout << "company: " << company << endl;
+            cout << "duration: " << duration << endl;
+            cout << "distance: " << distance << endl;
         }
-        virtual void outputInfo() = 0;
+
         virtual string getGenInfo() = 0;
         virtual string getSpecificInfo() = 0;
         double getDistance() {return distance;}
