@@ -40,7 +40,7 @@ public:
         cout << "Enter amenties please (type 0 to quit): " << endl;
         string userInput;
         cin >> userInput;
-        while(userInput != "0")
+        while (userInput != "0")
         {
             amenities.push_back(userInput);
             cout << "Enter Amenties please (type 0 to quit): " << endl;
@@ -53,7 +53,7 @@ public:
         cout << "Enter dining locations please (type 0 to quit): " << endl;
         string userInput2;
         cin >> userInput2;
-        while(userInput != "0")
+        while (userInput != "0")
         {
             dining.push_back(userInput2);
             cout << "Enter Amenties please (type 0 to quit): " << endl;
@@ -64,22 +64,22 @@ public:
         cin >> price;
 
         Lodging *myLodge;
-        if(typeOfLodging == "Hotel")
+        if (typeOfLodging == "Hotel")
         {
             myLodge = new Hotel(typeOfLodging, address, rating, amenities, phoneNumber, dining, price);
             return myLodge;
         }
-        else if(typeOfLodging == "Motel")
+        else if (typeOfLodging == "Motel")
         {
             myLodge = new Motel(typeOfLodging, address, rating, amenities, phoneNumber, dining, price);
             return myLodge;
         }
-        else if(typeOfLodging == "AirBnB")
+        else if (typeOfLodging == "AirBnB")
         {
             myLodge = new AirBnB(typeOfLodging, address, rating, amenities, phoneNumber, dining, price);
             return myLodge;
         }
-        else if(typeOfLodging == "Resort")
+        else if (typeOfLodging == "Resort")
         {
             myLodge = new Resort(typeOfLodging, address, rating, amenities, phoneNumber, dining, price);
             return myLodge;
@@ -89,7 +89,7 @@ public:
             myLodge = new Lodging(typeOfLodging, address, rating, amenities, phoneNumber, dining, price);
             return myLodge;
         }
-        
+
         return myLodge;
     }
 };

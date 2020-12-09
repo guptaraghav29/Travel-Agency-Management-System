@@ -34,7 +34,7 @@ TEST(LodgingTest, Address)
     d.push_back("cookies");
     d.push_back("cream");
     Lodging l("Hotel", "Hawaii", 4.5, a, "6692458566", d, 450.0);
- 
+
     EXPECT_EQ(l.getAddress(), "Hawaii");
 }
 
@@ -63,7 +63,7 @@ TEST(LodgingTest, Amenities)
     d.push_back("cream");
     Lodging l("Hotel", "Hawaii", 4.5, a, "6692458566", d, 450.0);
 
-    EXPECT_EQ(l.getAmenities(), a);  
+    EXPECT_EQ(l.getAmenities(), a);
 }
 
 TEST(LodgingTest, PhoneNumber)
@@ -78,7 +78,6 @@ TEST(LodgingTest, PhoneNumber)
     Lodging l("Hotel", "Hawaii", 4.5, a, "6692458566", d, 450.0);
 
     EXPECT_EQ(l.getPhoneNumber(), "6692458566");
-   
 }
 
 TEST(LodgingTest, Dining)
@@ -123,7 +122,7 @@ TEST(HotelTest, AllConstructorParams)
     EXPECT_EQ(l.getTypeOfLodging(), "Hotel");
     EXPECT_EQ(l.getAddress(), "Canada");
     EXPECT_EQ(l.getRating(), 2);
-    EXPECT_EQ(l.getAmenities(), a);  
+    EXPECT_EQ(l.getAmenities(), a);
     EXPECT_EQ(l.getPhoneNumber(), "6692458566");
     EXPECT_EQ(l.getDining(), d);
     EXPECT_EQ(l.getPrice(), 200.12);
@@ -143,7 +142,7 @@ TEST(MotelTest, AllConstructorParams)
     EXPECT_EQ(l.getTypeOfLodging(), "Motel");
     EXPECT_EQ(l.getAddress(), "LA");
     EXPECT_EQ(l.getRating(), 88);
-    EXPECT_EQ(l.getAmenities(), a);  
+    EXPECT_EQ(l.getAmenities(), a);
     EXPECT_EQ(l.getPhoneNumber(), "1092458566");
     EXPECT_EQ(l.getDining(), d);
     EXPECT_EQ(l.getPrice(), 99.99);
@@ -163,7 +162,7 @@ TEST(AirBnBTest, AllConstructorParams)
     EXPECT_EQ(l.getTypeOfLodging(), "AirBnB");
     EXPECT_EQ(l.getAddress(), "SF");
     EXPECT_EQ(l.getRating(), 3);
-    EXPECT_EQ(l.getAmenities(), a);  
+    EXPECT_EQ(l.getAmenities(), a);
     EXPECT_EQ(l.getPhoneNumber(), "8882458566");
     EXPECT_EQ(l.getDining(), d);
     EXPECT_EQ(l.getPrice(), 69.69);
@@ -183,12 +182,11 @@ TEST(ResortTest, AllConstructorParams)
     EXPECT_EQ(l.getTypeOfLodging(), "Resort");
     EXPECT_EQ(l.getAddress(), "India");
     EXPECT_EQ(l.getRating(), 10.21);
-    EXPECT_EQ(l.getAmenities(), a);  
+    EXPECT_EQ(l.getAmenities(), a);
     EXPECT_EQ(l.getPhoneNumber(), "9992458566");
     EXPECT_EQ(l.getDining(), d);
     EXPECT_EQ(l.getPrice(), 350.02);
 }
-
 
 int main(int argc, char **argv)
 {

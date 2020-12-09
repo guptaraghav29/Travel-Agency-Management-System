@@ -6,13 +6,23 @@
 #include <vector>
 #include <algorithm>
 
-
 using namespace std;
 
 class Hotel : public Lodging
 {
 public:
-    Hotel(string typeOfLodging, string address, double rating, vector<string> amenities, string phoneNumber, vector<string> dining,  double price) 
+    Hotel() : Lodging()
+    {
+        this->typeOfLodging = " ";
+        this->address = " ";
+        this->rating = 0;
+        this->amenities = {""};
+        this->phoneNumber = " ";
+        this->dining = {""};
+        this->price = 0;
+    }
+
+    Hotel(string typeOfLodging, string address, double rating, vector<string> amenities, string phoneNumber, vector<string> dining, double price)
         : Lodging(typeOfLodging, address, rating, amenities, phoneNumber, dining, price) {}
     void getDetails()
     {

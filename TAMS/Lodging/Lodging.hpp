@@ -20,16 +20,17 @@ protected:
     double price;
 
 public:
-     Lodging()
+    Lodging()
     {
-        this->typeOfLodging = typeOfLodging;
-        this->address = address;
-        this->rating = rating;
-        this->amenities = amenities;
-        this->phoneNumber = phoneNumber;
-        this->dining = dining;
-        this->price = price;
+        this->typeOfLodging = " ";
+        this->address = " ";
+        this->rating = 0;
+        this->amenities = {""};
+        this->phoneNumber = " ";
+        this->dining = {""};
+        this->price = 0;
     }
+
     Lodging(string typeOfLodging, string address, double rating, vector<string> amenities, string phoneNumber, vector<string> dining, double price)
     {
         this->typeOfLodging = typeOfLodging;

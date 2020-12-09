@@ -12,14 +12,25 @@ using namespace std;
 class Motel : public Lodging
 {
 public:
-    Motel(string typeOfLodging, string address, double rating, vector<string> amenities, string phoneNumber, vector<string> dining,  double price) 
+    Motel() : Lodging()
+    {
+        this->typeOfLodging = " ";
+        this->address = " ";
+        this->rating = 0;
+        this->amenities = {""};
+        this->phoneNumber = " ";
+        this->dining = {""};
+        this->price = 0;
+    }
+
+    Motel(string typeOfLodging, string address, double rating, vector<string> amenities, string phoneNumber, vector<string> dining, double price)
         : Lodging(typeOfLodging, address, rating, amenities, phoneNumber, dining, price) {}
     void getDetails()
     {
         cout << "Lodging: " << typeOfLodging << endl;
         Lodging::getDetails();
     }
-    
+
     virtual string getTypeOfLodging()
     {
         return typeOfLodging;
