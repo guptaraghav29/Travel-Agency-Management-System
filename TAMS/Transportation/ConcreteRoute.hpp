@@ -29,8 +29,8 @@ public:
     void outputInfo()
     {
         Route::outputInfo();
-        cout << "gate_num: " << gate_num << endl;
-        cout << "flight_num: " << flight_num << endl;
+        cout << "gate number: " << gate_num << endl;
+        cout << "flight number: " << flight_num << endl;
     }
 
     string getGenInfo() {

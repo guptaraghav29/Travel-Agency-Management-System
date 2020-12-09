@@ -36,6 +36,8 @@ class Route {
             cin.ignore();
         }
 
+        ~Route();
+
         // Route(string origin, string destination, string date, string time, string company, double duration, double distance) {
         //     this->origin = origin;
         //     this->destination = destination;
