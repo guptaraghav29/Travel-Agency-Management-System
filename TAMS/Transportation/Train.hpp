@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class Train : public TransportationFactory {
+class TrainEconomy : public TransportationFactory {
     public:
         Route* getRoute() {
             return new TrainRoute();

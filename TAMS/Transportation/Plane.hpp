@@ -7,7 +7,7 @@
 #include "ConcreteRoute.hpp"
 #include "ConcreteTicket.hpp"
 
-class Plane : public TransportationFactory {
+class PlaneEconomy : public TransportationFactory {
     public:
         Route* getRoute() {
             return new AirRoute();
