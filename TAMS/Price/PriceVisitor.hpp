@@ -1,6 +1,11 @@
-#include "../POI/PointOfInterest.hpp"
+#ifndef __PRICEVISITOR_HPP__
+#define __PRICEVISITOR_HPP__
+
+#include "../PointOfInterest/PointOfInterest.hpp"
 #include "../Lodging/Lodging.hpp"
-#include "../Transportation/PointOfInterest.hpp"
+#include "../Transportation/Transportation.hpp"
+
+class PointOfInterest;
 
 class PriceVisitor {
     protected:
@@ -9,7 +14,7 @@ class PriceVisitor {
         PriceVisitor() : total_price(0) { }
         virtual void visit(PointOfInterest*) = 0;
         virtual void visit(Lodging*) = 0;
-        virtual void visit(Ticket*) = 0;
+        virtual void visit(Transportation*) = 0;
         double getTotalPrice();
 };
 
@@ -18,7 +23,7 @@ class StandardPrice : public PriceVisitor {
         StandardPrice() : PriceVisitor() { }
         virtual void visit(PointOfInterest*) override;
         virtual void visit(Lodging*) override;
-        virtual void visit(Ticket*) override;
+        virtual void visit(Transportation*) override;
 };
 
 class CheapPrice : public PriceVisitor {
@@ -26,7 +31,7 @@ class CheapPrice : public PriceVisitor {
         CheapPrice() : PriceVisitor() { }
         virtual void visit(PointOfInterest*) override;
         virtual void visit(Lodging*) override;
-        virtual void visit(Ticket*) override;
+        virtual void visit(Transportation*) override;
 };
 
 class ExpensivePrice : public PriceVisitor {
@@ -34,5 +39,7 @@ class ExpensivePrice : public PriceVisitor {
         ExpensivePrice() : PriceVisitor() { }
         virtual void visit(PointOfInterest*) override;
         virtual void visit(Lodging*) override;
-        virtual void visit(Ticket*) override;
+        virtual void visit(Transportation*) override;
 };
+
+#endif

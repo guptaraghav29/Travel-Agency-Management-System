@@ -12,24 +12,25 @@ private:
     string flight_num;
 
 public:
-    AirRoute() : Route() {}
-    AirRoute(string origin, string destination, string date, string time, string company, double duration, double distance, string gate_num, string flight_num) 
-        : Route(origin, destination, date, time, company, duration, distance) {
-            this->gate_num = gate_num;
-            this->flight_num = flight_num;
+    AirRoute() : Route() 
+    {
+        cout << "Enter flight number:\n";
+        getline(cin, flight_num);
+        cout << "Enter gate number:\n";
+        getline(cin, gate_num);
     }
+
+    // AirRoute(string origin, string destination, string date, string time, string company, double duration, double distance, string gate_num, string flight_num) 
+    //     : Route(origin, destination, date, time, company, duration, distance) {
+    //         this->gate_num = gate_num;
+    //         this->flight_num = flight_num;
+    // }
 
     void outputInfo()
     {
-        cout << "origin: " << origin << endl;
-        cout << "destination: " << destination << endl;
-        cout << "date: " << date << endl;
-        cout << "time: " << time << endl;        
-        cout << "company: " << company << endl;
-        cout << "duration: " << duration << endl;
-        cout << "distance: " << distance << endl;
-        cout << "gate_num: " << gate_num << endl;
-        cout << "flight_num: " << flight_num << endl;
+        Route::outputInfo();
+        cout << "gate number: " << gate_num << endl;
+        cout << "flight number: " << flight_num << endl;
     }
 
     string getGenInfo() {
@@ -48,22 +49,23 @@ private:
     string ship_name;
 
 public:
-    CruiseRoute() : Route() {}
-    CruiseRoute(string origin, string destination, string date, string time, string company, double duration, double distance, string pier, string ship_name) 
-        : Route(origin, destination, date, time, company, duration, distance) {
-            this->pier = pier;
-            this->ship_name = ship_name;
-        }
+    CruiseRoute() : Route()
+    {
+        cout << "Enter ship name:\n";
+        getline(cin, ship_name);
+        cout << "Enter pier number:\n";
+        getline(cin, pier);
+    }
+
+    // CruiseRoute(string origin, string destination, string date, string time, string company, double duration, double distance, string pier, string ship_name) 
+    //     : Route(origin, destination, date, time, company, duration, distance) {
+    //         this->pier = pier;
+    //         this->ship_name = ship_name;
+    //     }
 
     void outputInfo()
     {
-        cout << "origin: " << origin << endl;
-        cout << "destination: " << destination << endl;
-        cout << "date: " << date << endl;
-        cout << "time: " << time << endl;
-        cout << "company: " << company << endl;
-        cout << "duration: " << duration << endl;
-        cout << "distance: " << distance << endl;
+        Route::outputInfo();
         cout << "pier: " << pier << endl;
         cout << "ship name: " << ship_name << endl;
     }
@@ -84,22 +86,23 @@ private:
     string train_num;
 
 public:
-    TrainRoute() : Route() {}
-    TrainRoute(string origin, string destination, string date, string time, string company, double duration, double distance, string platform, string train_num) 
-        : Route(origin, destination, date, time, company, duration, distance) {
-            this->platform = platform;
-            this->train_num = train_num;
-        }
+    TrainRoute() : Route()
+    {
+        cout << "Enter train number:\n";
+        getline(cin, train_num);
+        cout << "Enter platform number:\n";
+        getline(cin, platform);
+    }
+
+    // TrainRoute(string origin, string destination, string date, string time, string company, double duration, double distance, string platform, string train_num) 
+    //     : Route(origin, destination, date, time, company, duration, distance) {
+    //         this->platform = platform;
+    //         this->train_num = train_num;
+    //     }
 
     void outputInfo()
     {
-        cout << "origin: " << origin << endl;
-        cout << "destination: " << destination << endl;
-        cout << "date: " << date << endl;
-        cout << "time: " << time << endl;
-        cout << "company: " << company << endl;
-        cout << "duration: " << duration << endl;
-        cout << "distance: " << distance << endl;
+        Route::outputInfo();
         cout << "platform: " << platform << endl;
         cout << "train_num: " << train_num << endl;
     }
