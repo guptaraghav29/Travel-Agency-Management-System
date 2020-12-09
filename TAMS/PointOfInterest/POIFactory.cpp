@@ -1,4 +1,5 @@
 #include "POIFactory.hpp"
+#include <limits>
 
 int POIFactory::choice(int a, int b)
 {

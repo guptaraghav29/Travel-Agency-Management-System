@@ -5,6 +5,9 @@
 #include "Ticket.hpp"
 #include "ConcreteRoute.hpp"
 #include "ConcreteTicket.hpp"
+#include "../Price/PriceVisitor.hpp"
+
+class PriceVisitor;
 
 class Transportation
 {
@@ -15,16 +18,6 @@ class Transportation
     public:
         Transportation(Route* r, Ticket* t) : route(r), ticket(t), price(r->getDistance() / 6 * t->multiplier()) {}
         ~Transportation() { delete route; delete ticket; }
-        
-        // Route* getRoute()
-        // {
-        //     return route;
-        // }
-        
-        // Ticket* getTicket()
-        // {
-        //     return ticket;
-        // }
         
         void getInfo()
         {
@@ -38,7 +31,7 @@ class Transportation
             return price;
         }
 
-       // void accept(PriceVisitor* visitor) { visitor->visit(this); }
+       void accept(PriceVisitor* visitor) { visitor->visit(this); }
 
 };
 

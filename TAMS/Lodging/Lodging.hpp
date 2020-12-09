@@ -5,6 +5,9 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include "../Price/PriceVisitor.hpp"
+
+class PriceVisitor;
 
 using namespace std;
 
@@ -93,6 +96,8 @@ public:
     {
         return price;
     };
+
+    void accept(PriceVisitor* visitor) { visitor->visit(this); }
 };
 
 #endif
