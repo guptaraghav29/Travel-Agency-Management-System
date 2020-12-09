@@ -109,7 +109,7 @@ void Trip::printInfo()
         for (auto t : transportation)
         {
             t->getInfo();
-            visitor->visit(t);
+            t->accept(visitor);
         }
     std::cout << '\n';
 
@@ -121,7 +121,7 @@ void Trip::printInfo()
         {
             std::cout << p->getInfo() << '\n';
             std::cout << "Price: " << p->getPrice() << '\n';
-            visitor->visit(p);
+            p->accept(visitor);
         }
     std::cout << '\n';
 
@@ -132,7 +132,7 @@ void Trip::printInfo()
         for (auto l : lodging)
         {
             l->getDetails();
-            visitor->visit(l);
+            l->accept(visitor);
         }
     std::cout << '\n';
     std::cout << "Total Price: " << visitor->getTotalPrice() << '\n';
