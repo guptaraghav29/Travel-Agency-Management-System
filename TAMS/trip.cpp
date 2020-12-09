@@ -39,7 +39,26 @@ void Trip::customize()
 
 void Trip::addTransportation()
 {
-    TransportationFactory* factory = new TransportationFactory();
+    TransportationFactory* factory;
+    
+    std::cout << "Type of transport:\n1. Air\n2. Cruise\n3. Train\n" << std::endl;
+    int type = choice(1, 3);
+    std::cout << "Type of ticket:\n1. Economy\n2. First\n" << std::endl;
+    int ticket = choice(1, 2);
+
+    if (type == 1 && ticket == 1) // Economy Air
+        factory = new PlaneEconomy();
+    else if (type == 1 && ticket == 2) // First class Air
+        factory = new PlaneFirst();
+    else if (type == 2 && ticket == 1) // Economy class Cruise
+        factory = new CruiseEconomy();
+    else if (type == 2 && ticket == 2) // First class Cruise
+        factory = new CruiseSuite();
+    else if (type == 3 && ticket == 1) // Economy class Train
+        factory = new TrainEconomy();
+    else if (type == 3 && ticket == 2) // First class Train
+        factory = new TrainFirst();
+
     Transportation* newTransport = factory->generate();
     transportation.push_back(newTransport);
 }
