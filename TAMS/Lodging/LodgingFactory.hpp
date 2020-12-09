@@ -63,9 +63,34 @@ public:
         cout << "Enter a price: " << endl;
         cin >> price;
 
-        Lodging *myLodge = new Lodging(typeOfLodging, address, rating, amenities, phoneNumber, dining, price);
-        return myLodge;
+        Lodging *myLodge;
+        if(typeOfLodging == "Hotel")
+        {
+            myLodge = new Hotel(typeOfLodging, address, rating, amenities, phoneNumber, dining, price);
+            return myLodge;
+        }
+        else if(typeOfLodging == "Motel")
+        {
+            myLodge = new Motel(typeOfLodging, address, rating, amenities, phoneNumber, dining, price);
+            return myLodge;
+        }
+        else if(typeOfLodging == "AirBnB")
+        {
+            myLodge = new AirBnB(typeOfLodging, address, rating, amenities, phoneNumber, dining, price);
+            return myLodge;
+        }
+        else if(typeOfLodging == "Resort")
+        {
+            myLodge = new Resort(typeOfLodging, address, rating, amenities, phoneNumber, dining, price);
+            return myLodge;
+        }
+        else
+        {
+            myLodge = new Lodging(typeOfLodging, address, rating, amenities, phoneNumber, dining, price);
+            return myLodge;
+        }
         
+        return myLodge;
     }
 };
 
