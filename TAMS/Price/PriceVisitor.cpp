@@ -1,4 +1,7 @@
 #include "PriceVisitor.hpp"
+#include "../PointOfInterest/PointOfInterest.hpp"
+#include "../Lodging/Lodging.hpp"
+#include "../Transportation/Transportation.hpp"
 
 double PriceVisitor::getTotalPrice() { return total_price; };
 

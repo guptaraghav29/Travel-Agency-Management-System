@@ -36,6 +36,8 @@ class Route {
             cin.ignore();
         }
 
+        virtual ~Route() { }
+
         // Route(string origin, string destination, string date, string time, string company, double duration, double distance) {
         //     this->origin = origin;
         //     this->destination = destination;
@@ -46,7 +48,7 @@ class Route {
         //     this->distance = distance;
         // }
 
-        void outputInfo()
+        virtual void outputInfo()
         {
             cout << "origin: " << origin << endl;
             cout << "destination: " << destination << endl;

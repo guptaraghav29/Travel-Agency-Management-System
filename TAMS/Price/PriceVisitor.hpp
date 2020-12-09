@@ -1,11 +1,11 @@
 #ifndef __PRICEVISITOR_HPP__
 #define __PRICEVISITOR_HPP__
 
-#include "../PointOfInterest/PointOfInterest.hpp"
-#include "../Lodging/Lodging.hpp"
-#include "../Transportation/Transportation.hpp"
+
 
 class PointOfInterest;
+class Lodging;
+class Transportation;
 
 class PriceVisitor {
     protected:
