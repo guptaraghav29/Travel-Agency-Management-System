@@ -30,6 +30,7 @@ class Route {
         virtual void outputInfo() = 0;
         virtual string getGenInfo() = 0;
         virtual string getSpecificInfo() = 0;
+        double getDistance() {return distance;}
 };
 
 #endif

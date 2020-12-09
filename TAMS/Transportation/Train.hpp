@@ -11,6 +11,10 @@ using namespace std;
 
 class TrainEconomy : public TransportationFactory {
     public:
+        generate() {
+            return new Transportation(new TrainRoute(), new Economy());
+        }
+
         Route* getRoute() {
             return new TrainRoute();
         }
@@ -21,6 +25,10 @@ class TrainEconomy : public TransportationFactory {
 
 class TrainFirst : public TransportationFactory {
     public:
+        generate() {
+            return new Transportation(new TrainRoute(), new First());
+        }
+
         Route* getRoute() {
             return new TrainRoute();
         }

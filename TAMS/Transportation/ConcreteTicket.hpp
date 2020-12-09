@@ -27,7 +27,7 @@ class First : public Ticket
 public:
     double multiplier()
     {
-        return 2.0;
+        return 1.2;
     }
 
     string getSeatNum()

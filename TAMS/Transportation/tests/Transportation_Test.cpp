@@ -64,7 +64,7 @@ TEST(TransportationFactory, FirstTicket) {
   string seat = f->getSeatNum();
 
   EXPECT_TRUE(stoi(seat) > 0 && stoi(seat) < 101);
-  EXPECT_DOUBLE_EQ(f->multiplier(), 2.0);
+  EXPECT_DOUBLE_EQ(f->multiplier(), 1.2);
 }
 
 int main(int argc, char **argv) {
