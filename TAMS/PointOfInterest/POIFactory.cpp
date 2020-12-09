@@ -21,20 +21,21 @@ int POIFactory::choice(int a, int b)
 
 PointOfInterest* POIFactory::generate()
 {
-    std::cin.ignore();
-
     std::cout << "Enter point of interest name (e.g., Joe's Pizza Kitchen):\n";
     std::string name;
     std::getline(std::cin, name, '\n');
+    std::cout << '\n';
 
     std::cout << "Enter point of interest type (e.g., Restaurant, Museum):\n";
     std::string type;
     std::getline(std::cin, type, '\n');
+    std::cout << '\n';
 
     std::cout << "Enter point of interest cost (e.g., 19.99, 50.00):\n";
     double price;
     std::cin >> price;
     std::cin.ignore();
+    std::cout << '\n';
 
     point = new GenericPOI(name, type, price);
     
@@ -90,6 +91,7 @@ PointOfInterest* POIFactory::generate()
                 break;
             }
         }
+        std::cout << '\n';
     }
     
     return point;

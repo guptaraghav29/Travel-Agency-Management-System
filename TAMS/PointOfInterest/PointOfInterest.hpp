@@ -7,6 +7,8 @@
 #include <iomanip> // For double precision conversion
 #include "../Price/PriceVisitor.hpp"
 
+class PriceVisitor;
+
 class PointOfInterest {
     protected:
         std::string name;
