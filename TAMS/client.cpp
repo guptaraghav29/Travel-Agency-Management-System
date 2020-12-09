@@ -1,5 +1,4 @@
 #include "client.hpp"
-#include <iostream>
 
 Client::~Client()
 {
@@ -50,7 +49,7 @@ void Client::run()
 
 void Client::listTrips()
 {
-    std::cout << "List Trips\n";
+    std::cout << "List Trips\n\n";
     int size = trips.size();
     if (!size)
     {
@@ -60,12 +59,14 @@ void Client::listTrips()
     {
         for (int i = 0; i < size; ++i)
         {
-            std::cout << "Trip " << i + 1 << ":\n";
+            std::cout << "Trip " << i + 1 << ": ";
             trips.at(i)->printName();
+            std::cout << '\n';
             trips.at(i)->printInfo();
             std::cout << '\n';
         }
     }
+    std::cout << '\n';
 }
 
 void Client::addTrip()
@@ -95,8 +96,8 @@ void Client::deleteTrip()
     }
 
     int index = choice(1, trips.size());
-    delete vec.at(index);
-    vec.erase(vec.begin() + (index - 1));
+    delete trips.at(index);
+    trips.erase(trips.begin() + (index - 1));
 }
 
 void Client::editTrip()

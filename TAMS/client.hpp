@@ -1,6 +1,10 @@
-#include <vector>
-#include "utility.hpp"
+#ifndef __CLIENT_HPP__
+#define __CLIENT_HPP__
+
 #include "trip.hpp"
+#include "utility.hpp"
+#include <vector>
+#include <iostream>
 
 class Client
 {
@@ -16,3 +20,5 @@ class Client
         void exportTrips();
         void importTrips();
 };
+
+#endif

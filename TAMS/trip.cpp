@@ -1,5 +1,24 @@
 #include "trip.hpp"
 
+Trip::Trip()
+{
+    std::cout << "Enter trip name: ";
+    std::getline(std::cin, name);
+    std::cout << "Choose pricing type:\n1. Normal (10% commission)\n2. Cheap (5% commission)\n3. Expensive (15% commission)";
+    switch (choice(1, 3))
+    {
+    case 1:
+        visitor = new StandardPrice();
+        break;
+    case 2:
+        visitor = new CheapPrice();
+        break;
+    case 3:
+        visitor = new ExpensivePrice();
+        break;
+    }
+}
+
 Trip::~Trip()
 {
     for (auto t : transportation)
@@ -15,13 +34,12 @@ void Trip::customize()
     int m_choice = 0;
     while (m_choice != 4)
     {
-        std::cout << "Customize trip\n"
-        "=============================================\n" 
+        std::cout << "\nCustomize trip\n==============\n" 
         "1. Add New Transportation\n"
         "2. Add New Point Of Interest\n"
         "3. Add New Lodging\n"
-        "4. Quit \n";
-        m_choice = choice(1, 4)
+        "4. Done \n";
+        m_choice = choice(1, 4);
         switch(m_choice)
         {
             case 1:
@@ -84,15 +102,29 @@ void Trip::printName()
 
 void Trip::printInfo()
 {
-    std::cout << "Transportation\n";
+    std::cout << "Transportation:\n";
     for (auto t : transportation)
+    {
         t->getInfo();
+        visitor->visit(t);
+    }
+    std::cout << '\n';
 
-    std::cout << "Points of Interest\n";
+    std::cout << "Points of Interest:\n";
     for (auto p : points)
-        p->getInfo();
+    {
+        std::cout << p->getInfo() << '\n';
+        std::cout << "Price: " << p->getPrice() << '\n';
+        visitor->visit(p);
+    }
+    std::cout << '\n';
 
-    std::cout << "Lodging\n";
+    std::cout << "Lodging:\n";
     for (auto l : lodging)
-        l->getInfo();
+    {
+        l->getDetails();
+        visitor->visit(l);
+    }
+    std::cout << '\n';
+    std::cout << "Total Price: " << visitor->getTotalPrice() << '\n';
 }

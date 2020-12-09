@@ -1,20 +1,29 @@
-#include <iostream>
+#ifndef __UTILITY_HPP__
+#define __UTILITY_HPP__
 
-int choice(int, int)
+#include <iostream>
+#include <limits>
+
+inline int choice(int a, int b)
 {
-    int choice;
+    int m_choice;
     bool valid = false;
     do
     {
         std::cout << "Enter choice (" << a << " - " << b << "): ";
-        std::cin >> choice;
+        std::cin >> m_choice;
         if (!std::cin)
         {
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }
-        else if (choice >= a && choice <= b)
+        else if (m_choice >= a && m_choice <= b)
             valid = true;
     } while (!valid);
-    return choice;
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    std::cout << '\n';
+    return m_choice;
 }
+
+#endif
