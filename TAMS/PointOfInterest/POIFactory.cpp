@@ -37,6 +37,7 @@ PointOfInterest* POIFactory::generate()
     std::cin.ignore();
 
     point = new GenericPOI(name, type, price);
+    
 
     while (true)
     {

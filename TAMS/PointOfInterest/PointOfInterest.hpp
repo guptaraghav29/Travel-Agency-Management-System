@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <string>
+#include <sstream> // For double precision conversion
+#include <iomanip> // For double precision conversion
 #include "../Price/PriceVisitor.hpp"
 
 class PointOfInterest {
@@ -23,8 +25,8 @@ class GenericPOI : public PointOfInterest {
     private:
     public:
         GenericPOI(std::string n, std::string t, double p) : PointOfInterest(n, t, p) { };
-        std::string getInfo();
-        double getPrice();
+        virtual std::string getInfo() override;
+        virtual double getPrice() override;
 };
 
 class InfoDecorator : public PointOfInterest {
@@ -34,7 +36,7 @@ class InfoDecorator : public PointOfInterest {
         InfoDecorator(PointOfInterest* point) : poi(point) { };
         ~InfoDecorator() { delete poi; }
         virtual std::string getInfo() = 0;
-        double getPrice();
+        virtual double getPrice() override;
 };
 
 class PhoneDecorator : public InfoDecorator {
