@@ -55,7 +55,7 @@ public:
         {
             cout << "Dining location #" << (i + 1) << ": " << dining.at(i) << endl;
         }
-        cout << price << endl;
+        cout << "Price: " << price << endl;
     }
 
     virtual string getTypeOfLodging()
