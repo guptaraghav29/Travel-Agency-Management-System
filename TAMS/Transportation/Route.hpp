@@ -2,8 +2,6 @@
 #define _ROUTE_HPP_
 
 #include <string>
-#include "Transportation.hpp"
-
 
 using namespace std;
 
@@ -18,7 +16,7 @@ class Route {
         double distance;
 
     public:
-        Route();
+        Route() {}
         void getInput() {
             cout << "Enter origin: " << endl;
             getline(cin, origin);

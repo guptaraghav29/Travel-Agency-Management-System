@@ -12,6 +12,7 @@
 #include "../Route.hpp"
 #include "../Ticket.hpp"
 #include "../TransportationFactory.hpp"
+#include "../Transportation.hpp"
 
 using namespace std;
 

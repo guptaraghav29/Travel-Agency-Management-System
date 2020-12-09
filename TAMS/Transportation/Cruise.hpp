@@ -6,18 +6,12 @@
 #include "TransportationFactory.hpp"
 #include "ConcreteRoute.hpp"
 #include "ConcreteTicket.hpp"
+#include "Transportation.hpp"
 
 class CruiseSuite : public TransportationFactory {
     public:
         Transportation* generate() {
             return new Transportation(new CruiseRoute(), new First());
-        }
-
-        Route* getRoute() {
-            return new CruiseRoute();
-        }
-        Ticket* getTicket() {
-            return new First();
         }
 };
 
@@ -26,14 +20,6 @@ class CruiseEconomy : public TransportationFactory {
         Transportation* generate() {
             return new Transportation(new CruiseRoute(), new Economy());
         }
-
-        Route* getRoute() {
-            return new CruiseRoute();
-        }
-        Ticket* getTicket() {
-            return new Economy();
-        }
 };
-
 
 #endif

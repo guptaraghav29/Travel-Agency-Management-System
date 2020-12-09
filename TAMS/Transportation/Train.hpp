@@ -6,20 +6,12 @@
 #include "TransportationFactory.hpp"
 #include "ConcreteRoute.hpp"
 #include "ConcreteTicket.hpp"
-
-using namespace std;
+#include "Transportation.hpp"
 
 class TrainEconomy : public TransportationFactory {
     public:
         Transportation* generate() {
             return new Transportation(new TrainRoute(), new Economy());
-        }
-
-        Route* getRoute() {
-            return new TrainRoute();
-        }
-        Ticket* getTicket(){
-            return new Economy();
         }
 };
 
@@ -27,13 +19,6 @@ class TrainFirst : public TransportationFactory {
     public:
         Transportation* generate() {
             return new Transportation(new TrainRoute(), new First());
-        }
-
-        Route* getRoute() {
-            return new TrainRoute();
-        }
-        Ticket* getTicket(){
-            return new First();
         }
 };
 

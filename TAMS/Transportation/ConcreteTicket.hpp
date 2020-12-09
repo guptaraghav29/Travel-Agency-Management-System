@@ -5,6 +5,7 @@
 #include <string>
 #include <stdlib.h>
 #include <iostream>
+
 using namespace std;
 
 class Economy : public Ticket

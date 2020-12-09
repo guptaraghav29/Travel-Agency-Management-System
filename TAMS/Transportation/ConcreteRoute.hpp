@@ -17,7 +17,7 @@ public:
         : Route(origin, destination, date, time, company, duration, distance) {
             this->gate_num = gate_num;
             this->flight_num = flight_num;
-        }
+    }
 
     void outputInfo()
     {

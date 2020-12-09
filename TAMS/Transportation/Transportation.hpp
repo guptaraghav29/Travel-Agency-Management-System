@@ -6,9 +6,6 @@
 #include "ConcreteRoute.hpp"
 #include "ConcreteTicket.hpp"
 
-class Route;
-class Ticket;
-
 class Transportation
 {
     private:
