@@ -2,6 +2,7 @@
 #define _ROUTE_HPP_
 
 #include <string>
+#include "Transportation.hpp"
 
 
 using namespace std;
@@ -18,6 +19,23 @@ class Route {
 
     public:
         Route();
+        void getInput() {
+            cout << "Enter origin: " << endl;
+            getline(cin, origin);
+            cout << "Enter destination: " << endl;
+            getline(cin, destination);
+            cout << "Enter date: " << endl;
+            getline(cin, date);
+            cout << "Enter time: " << endl;
+            getline(cin, time);
+            cout << "Enter company: " << endl;
+            getline(cin, company);
+            cout << "Enter duration: " << endl;
+            cin >> duration;
+            cout << "Enter distance: " << endl;
+            cin >> distance;
+        }
+
         Route(string origin, string destination, string date, string time, string company, double duration, double distance) {
             this->origin = origin;
             this->destination = destination;

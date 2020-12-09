@@ -9,7 +9,7 @@
 
 class CruiseSuite : public TransportationFactory {
     public:
-        generate() {
+        Transportation* generate() {
             return new Transportation(new CruiseRoute(), new First());
         }
 
@@ -23,10 +23,10 @@ class CruiseSuite : public TransportationFactory {
 
 class CruiseEconomy : public TransportationFactory {
     public:
-        generate() {
+        Transportation* generate() {
             return new Transportation(new CruiseRoute(), new Economy());
         }
-        
+
         Route* getRoute() {
             return new CruiseRoute();
         }

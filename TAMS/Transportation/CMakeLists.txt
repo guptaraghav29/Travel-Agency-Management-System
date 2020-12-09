@@ -14,6 +14,7 @@ ADD_EXECUTABLE(test
     Route.hpp
     Ticket.hpp
     TransportationFactory.hpp
+    Transportation.hpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)

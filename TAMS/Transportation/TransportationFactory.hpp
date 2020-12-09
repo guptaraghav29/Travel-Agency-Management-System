@@ -7,8 +7,7 @@
 
 class TransportationFactory {
     public:
-        virtual Route* getRoute() = 0;
-        virtual Ticket* getTicket() = 0;
+        virtual Transportation* generate() = 0;
 
 };
 
