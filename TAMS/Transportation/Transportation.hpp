@@ -23,6 +23,7 @@ class Transportation
         {
             route->outputInfo();
             std::cout << "seat number: " << ticket->getSeatNum() << std::endl;
+            std::cout << "ticket type: " << ticket->getSeatType() << std::endl;
             std::cout << "Price: " << price << std::endl;
         }
 

@@ -50,7 +50,7 @@
  >   * These cards should represent roughly 7 days worth of development time for your team, taking you until your first meeting with the TA
  -->
 ## Class Diagram
- ![OMT class diagram](/Diagram.png)
+ ![OMT class diagram](/images/CS100_Project_Diagram.png)
  * The abstract factory design pattern is used to create groups of transportation and ticket classes
  * The decorator design pattern is used to add additional information to points of interest should they need it
  * The visitor design pattern is used to caluclate commission differently based on the package without needing to add extra methods to the existing classes for each new commission calculation
@@ -59,7 +59,11 @@
  -->
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+ Screenshots of the input/output after running the application:
+![Screenshot 1](/images/Screenshot1.png)
+![Screenshot 2](/images/Screenshot2.png)
+![Screenshot 3](/images/Screenshot3.png)
+
  ## Installation/Usage
  * Instructions on installing and running the application:
 	 1. git clone https://github.com/cs100/final-project-rgupt047-pdarb001-lwang283.git
@@ -79,9 +83,8 @@
 	4. If list trips (4) selected, the console outputs all the information collected for each of the trips added
 	5. If delete trip (2) is selected, asks user which trip to be deleted
 	6. To quit program enter 7
- * Options 3, 5-6 in the main menu were not able to be implemented by the deadline
-
 
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ For our project we tested each feature individually (Transportation, Points of Interest, Lodging) within separate branches before merging them together. In each of these features we created unit tests to test the functionality within each class separately. After that was done, we combined the unit tests and manually tested the entire program in another branch called “Integration”. We created a main test harness as well that tests the program through a client portal. Since the majority of our client code relied on user input, we tested these parts of the code manually over the course of several days and with a variety of tests including regression tests, edge cases, and so forth. 
+
  
