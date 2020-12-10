@@ -50,7 +50,7 @@
  >   * These cards should represent roughly 7 days worth of development time for your team, taking you until your first meeting with the TA
  -->
 ## Class Diagram
- ![OMT class diagram](/Diagram.png)
+ ![OMT class diagram](/images/Diagram.png)
  * The abstract factory design pattern is used to create groups of transportation and ticket classes
  * The decorator design pattern is used to add additional information to points of interest should they need it
  * The visitor design pattern is used to caluclate commission differently based on the package without needing to add extra methods to the existing classes for each new commission calculation
@@ -59,7 +59,11 @@
  -->
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+ Screenshots of the input/output after running the application:
+![Screenshot 1](/images/Screenshot1.png)
+![Screenshot 2](/images/Screenshot2.png)
+![Screenshot 3](/images/Screenshot3.png)
+
  ## Installation/Usage
  * Instructions on installing and running the application:
 	 1. git clone https://github.com/cs100/final-project-rgupt047-pdarb001-lwang283.git
