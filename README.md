@@ -83,17 +83,17 @@
 	* 5. ./TAMS
 
  * This application is for travel agents to create travel plans for their clients. 
-	* 1. The travel agent selects an option from the main menu to either add a trip, list trips, delete trips, and etc. and enters the corresponding number to the option
-	* 2. Then depending on the option selected fill out the corresponding information
-	* 3. If adding a trip(1): enter trip name, select a price type (based on client’s budget)
-		* a. Then the travel agent (user) can customize the trip using the 3 options from the menu: Add New Transportation, Add New Point Of Interest, Add New Lodging
-		* b. Enter the number corresponding to the option selected
-		* c. Then the user enters all the corresponding information prompted by the program
-		* d. Once complete, select done option to go back to the main menu
-	* 4. If list trips (4) selected, the console outputs all the information collected for each of the trips added
-	* 5. If delete trip (2) is selected, asks user which trip to be deleted
-	* 6. To quit program enter 7
- 	* Options 3, 5-6 in the main menu were not able to be implemented by the deadline
+	1. The travel agent selects an option from the main menu to either add a trip, list trips, delete trips, and etc. and enters the corresponding number to the option
+	2. Then depending on the option selected fill out the corresponding information
+	3. If adding a trip(1): enter trip name, select a price type (based on client’s budget)
+		a. Then the travel agent (user) can customize the trip using the 3 options from the menu: Add New Transportation, Add New Point Of Interest, Add New Lodging
+		b. Enter the number corresponding to the option selected
+		c. Then the user enters all the corresponding information prompted by the program
+		d. Once complete, select done option to go back to the main menu
+	4. If list trips (4) selected, the console outputs all the information collected for each of the trips added
+	5. If delete trip (2) is selected, asks user which trip to be deleted
+	6. To quit program enter 7
+ * Options 3, 5-6 in the main menu were not able to be implemented by the deadline
 
 
  ## Testing
