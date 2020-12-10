@@ -37,16 +37,17 @@ class Route {
         }
 
         virtual ~Route() { }
-
-        // Route(string origin, string destination, string date, string time, string company, double duration, double distance) {
-        //     this->origin = origin;
-        //     this->destination = destination;
-        //     this->date = date;
-        //     this->time = time;
-        //     this->company = company;
-        //     this->duration = duration;
-        //     this->distance = distance;
-        // }
+        
+        // For unit tests
+        Route(string origin, string destination, string date, string time, string company, double duration, double distance) {
+            this->origin = origin;
+            this->destination = destination;
+            this->date = date;
+            this->time = time;
+            this->company = company;
+            this->duration = duration;
+            this->distance = distance;
+        }
 
         virtual void outputInfo()
         {

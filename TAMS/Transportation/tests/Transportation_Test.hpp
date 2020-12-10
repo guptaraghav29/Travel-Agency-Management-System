@@ -128,8 +128,3 @@ TEST(TransportationFactory, FirstTicket) {
   EXPECT_TRUE(stoi(seat) > 0 && stoi(seat) < 101);
   EXPECT_DOUBLE_EQ(f->multiplier(), 1.2);
 }
-
-int main(int argc, char **argv) {
-  ::testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
-}
