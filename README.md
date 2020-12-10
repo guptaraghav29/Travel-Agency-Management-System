@@ -76,11 +76,11 @@
  > Screenshots of the input/output after running your application
  ## Installation/Usage
  * Instructions on installing and running the application:
-	* 1. git clone https://github.com/cs100/final-project-rgupt047-pdarb001-lwang283.git
-	* 2. git submodule update --init --recursive
-	* 3. cmake .
-	* 4. make
-	* 5. ./TAMS
+	 1. git clone https://github.com/cs100/final-project-rgupt047-pdarb001-lwang283.git
+	 2. git submodule update --init --recursive
+	 3. cmake .
+	 4. make
+	 5. ./TAMS
 
  * This application is for travel agents to create travel plans for their clients. 
 	1. The travel agent selects an option from the main menu to either add a trip, list trips, delete trips, and etc. and enters the corresponding number to the option
