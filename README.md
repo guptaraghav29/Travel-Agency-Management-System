@@ -50,7 +50,7 @@
  >   * These cards should represent roughly 7 days worth of development time for your team, taking you until your first meeting with the TA
  -->
 ## Class Diagram
- ![OMT class diagram](/Diagram.png)
+ ![OMT class diagram](/CS100_Project_Diagram.png)
  * The abstract factory design pattern is used to create groups of transportation and ticket classes
  * The decorator design pattern is used to add additional information to points of interest should they need it
  * The visitor design pattern is used to caluclate commission differently based on the package without needing to add extra methods to the existing classes for each new commission calculation
