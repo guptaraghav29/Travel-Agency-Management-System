@@ -39,7 +39,7 @@ class First : public Ticket
 public:
     First()
     {
-        int num = rand() % 10;
+        int num = rand() % 10 + 1;
         char letter = (rand() % 5) + 'A';
         seat_num = to_string(num) + letter;
     }

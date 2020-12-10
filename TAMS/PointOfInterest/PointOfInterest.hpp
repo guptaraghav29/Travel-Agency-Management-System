@@ -37,7 +37,6 @@ class InfoDecorator : public PointOfInterest {
     public:
         InfoDecorator(PointOfInterest* point) : poi(point) { };
         virtual ~InfoDecorator() { delete poi; }
-        virtual std::string getInfo() = 0;
         virtual double getPrice() override;
 };
 
@@ -80,7 +79,5 @@ class TimeDecorator : public InfoDecorator {
         TimeDecorator(PointOfInterest* point, std::string t) : InfoDecorator(point), time(t) { };
         virtual std::string getInfo() override;
 };
-
-
 
 #endif //__POINTOFINTEREST_HPP__

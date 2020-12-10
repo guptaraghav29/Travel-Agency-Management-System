@@ -40,7 +40,7 @@ public:
 
         string userInput;      
         do {
-            cout << "Enter Amenties please (type 0 to quit): " << endl;
+            cout << "Enter amenties please (type 0 to quit): " << endl;
             getline(cin, userInput);
             amenities.push_back(userInput);
         } while (userInput != "0");
@@ -50,13 +50,13 @@ public:
         getline(cin, phoneNumber);
 
         do {
-            cout << "Enter dining locations please (type 0 to quit): " << endl;
+            cout << "Enter nearby dining locations please (type 0 to quit): " << endl;
             getline(cin, userInput);
             dining.push_back(userInput);
         } while (userInput != "0");
         dining.pop_back();
 
-        cout << "Enter a price: " << endl;
+        cout << "Enter price per night: " << endl;
         cin >> price;
         cin.ignore();
 
