@@ -50,7 +50,7 @@
  >   * These cards should represent roughly 7 days worth of development time for your team, taking you until your first meeting with the TA
  -->
 ## Class Diagram
- ![OMT class diagram](/omt_diagram.png)
+ ![OMT class diagram](/Diagram.png)
  * The abstract factory design pattern is used to create groups of transportation and ticket classes
  * The decorator design pattern is used to add additional information to points of interest should they need it
  * The visitor design pattern is used to caluclate commission differently based on the package without needing to add extra methods to the existing classes for each new commission calculation
@@ -58,24 +58,30 @@
  > Include a class diagram(s) for each design pattern and a description of the diagram(s). This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper OMT notation (as discussed in the course slides). You may combine multiple design patterns into one diagram if you'd like, but it needs to be clear which portion of the diagram represents which design pattern (either in the diagram or in the description). 
  -->
  
- > ## Phase III
- > You will need to schedule a check-in with the TA (during lab hours or office hours). Your entire team must be present. 
- > * Before the meeting you should perform a sprint plan like you did in Phase II
- > * In the meeting with your TA you will discuss: 
- >   - How effective your last sprint was (each member should talk about what they did)
- >   - Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
- >   - Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
- >   - What tasks you are planning for this next sprint.
-
- > ## Final deliverable
- > All group members will give a demo to the TA during lab time. The TA will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Kanban board. 
  ## Screenshots
  > Screenshots of the input/output after running your application
  ## Installation/Usage
- > Instructions on installing and running your application
+ * Instructions on installing and running the application:
+	 1. git clone https://github.com/cs100/final-project-rgupt047-pdarb001-lwang283.git
+	 2. git submodule update --init --recursive
+	 3. cmake .
+	 4. make
+	 5. ./TAMS
+
+ * This application is for travel agents to create travel plans for their clients. 
+	1. The travel agent selects an option from the main menu to either add a trip, list trips, delete trips, and etc. and enters the corresponding number to the option
+	2. Then depending on the option selected fill out the corresponding information
+	3. If adding a trip(1): enter trip name, select a price type (based on client’s budget)
+		- a. Then the travel agent (user) can customize the trip using the 3 options from the menu: Add New Transportation, Add New Point Of Interest, Add New Lodging
+		- b. Enter the number corresponding to the option selected
+		- c. Then the user enters all the corresponding information prompted by the program
+		- d. Once complete, select done option to go back to the main menu
+	4. If list trips (4) selected, the console outputs all the information collected for each of the trips added
+	5. If delete trip (2) is selected, asks user which trip to be deleted
+	6. To quit program enter 7
+ * Options 3, 5-6 in the main menu were not able to be implemented by the deadline
+
+
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  
