@@ -63,7 +63,7 @@ void Client::listTrips()
             trips.at(i)->printName();
             std::cout << '\n';
             trips.at(i)->printInfo();
-            std::cout << '\n';
+            std::cout << "=======================\n";
         }
     }
     std::cout << '\n';
@@ -89,15 +89,14 @@ void Client::deleteTrip()
     {
         for (int i = 0; i < size; ++i)
         {
-            std::cout << "Trip " << i + 1 << ": ";
+            std::cout << i + 1 << ". ";
             trips.at(i)->printName();
-            std::cout << '\n';
         }
-    }
 
-    int index = choice(1, trips.size());
-    delete trips.at(index - 1);
-    trips.erase(trips.begin() + (index - 1));
+        int index = choice(1, trips.size());
+        delete trips.at(index - 1);
+        trips.erase(trips.begin() + (index - 1));
+    }
 }
 
 void Client::editTrip()
