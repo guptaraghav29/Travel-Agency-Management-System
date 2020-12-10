@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/Test/alltests.dir/Test/test.cpp.o CMakeFiles/Test/alltests.dir/PointOfInterest/PointOfInterest.cpp.o -o Test/alltests  lib/libgtest.a 
