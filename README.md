@@ -79,9 +79,8 @@
 	4. If list trips (4) selected, the console outputs all the information collected for each of the trips added
 	5. If delete trip (2) is selected, asks user which trip to be deleted
 	6. To quit program enter 7
- * Options 3, 5-6 in the main menu were not able to be implemented by the deadline
-
 
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ > For our project we tested each feature individually (Transportation, Points of Interest, Lodging) within separate branches before merging them together. In each of these features we created unit tests to test the functionality within each class separately. After that was done, we combined the unit tests and manually tested the entire program in another branch called “Integration”. We created a main test harness as well that tests the program through a client portal. Since the majority of our client code relied on user input, we tested these parts of the code manually over the course of several days and with a variety of tests including regression tests, edge cases, and so forth. 
+
  
