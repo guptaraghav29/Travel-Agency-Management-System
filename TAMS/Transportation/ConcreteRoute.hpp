@@ -20,11 +20,12 @@ public:
         getline(cin, gate_num);
     }
 
-    // AirRoute(string origin, string destination, string date, string time, string company, double duration, double distance, string gate_num, string flight_num) 
-    //     : Route(origin, destination, date, time, company, duration, distance) {
-    //         this->gate_num = gate_num;
-    //         this->flight_num = flight_num;
-    // }
+    // For unit tests
+    AirRoute(string origin, string destination, string date, string time, string company, double duration, double distance, string gate_num, string flight_num) 
+        : Route(origin, destination, date, time, company, duration, distance) {
+            this->gate_num = gate_num;
+            this->flight_num = flight_num;
+    }
 
     void outputInfo()
     {
@@ -57,11 +58,12 @@ public:
         getline(cin, pier);
     }
 
-    // CruiseRoute(string origin, string destination, string date, string time, string company, double duration, double distance, string pier, string ship_name) 
-    //     : Route(origin, destination, date, time, company, duration, distance) {
-    //         this->pier = pier;
-    //         this->ship_name = ship_name;
-    //     }
+    // For unit tests
+    CruiseRoute(string origin, string destination, string date, string time, string company, double duration, double distance, string pier, string ship_name) 
+        : Route(origin, destination, date, time, company, duration, distance) {
+            this->pier = pier;
+            this->ship_name = ship_name;
+        }
 
     void outputInfo()
     {
@@ -94,11 +96,12 @@ public:
         getline(cin, platform);
     }
 
-    // TrainRoute(string origin, string destination, string date, string time, string company, double duration, double distance, string platform, string train_num) 
-    //     : Route(origin, destination, date, time, company, duration, distance) {
-    //         this->platform = platform;
-    //         this->train_num = train_num;
-    //     }
+    // For unit tests
+    TrainRoute(string origin, string destination, string date, string time, string company, double duration, double distance, string platform, string train_num) 
+        : Route(origin, destination, date, time, company, duration, distance) {
+            this->platform = platform;
+            this->train_num = train_num;
+        }
 
     void outputInfo()
     {

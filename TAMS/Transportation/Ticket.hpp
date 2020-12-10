@@ -9,7 +9,7 @@ protected:
     string seat_num;
     string seat_type;
 public:
-    virtual ~Ticket();
+    virtual ~Ticket() { }
     string getSeatNum();
     virtual double multiplier() = 0;
     virtual string getSeatType() = 0;

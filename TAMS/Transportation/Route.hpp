@@ -36,19 +36,20 @@ class Route {
             cin.ignore();
         }
 
-        ~Route();
+        virtual ~Route() { }
+        
+        // For unit tests
+        Route(string origin, string destination, string date, string time, string company, double duration, double distance) {
+            this->origin = origin;
+            this->destination = destination;
+            this->date = date;
+            this->time = time;
+            this->company = company;
+            this->duration = duration;
+            this->distance = distance;
+        }
 
-        // Route(string origin, string destination, string date, string time, string company, double duration, double distance) {
-        //     this->origin = origin;
-        //     this->destination = destination;
-        //     this->date = date;
-        //     this->time = time;
-        //     this->company = company;
-        //     this->duration = duration;
-        //     this->distance = distance;
-        // }
-
-        void outputInfo()
+        virtual void outputInfo()
         {
             cout << "origin: " << origin << endl;
             cout << "destination: " << destination << endl;
