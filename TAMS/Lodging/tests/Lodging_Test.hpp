@@ -187,9 +187,3 @@ TEST(ResortTest, AllConstructorParams)
     EXPECT_EQ(l.getDining(), d);
     EXPECT_EQ(l.getPrice(), 350.02);
 }
-
-int main(int argc, char **argv)
-{
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}

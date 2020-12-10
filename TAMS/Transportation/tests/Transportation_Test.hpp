@@ -79,7 +79,7 @@ TEST(TransportationFactory, EconomyPlane) {
   Ticket* e = new Economy();
   string seat = e->getSeatNum();
 
-  EXPECT_TRUE(stoi(seat) > 0 && stoi(seat) < 101);
+  EXPECT_TRUE(stoi(seat) > 0 && stoi(seat) < 26);
   EXPECT_DOUBLE_EQ(e->multiplier(), 1.0);
 
   EXPECT_EQ(a.getGenInfo(), "Hawaii Europe 4/27/22 12PM Emirates 20.000000 255000.250000");
@@ -92,7 +92,7 @@ TEST(TransportationFactory, FirstClassTrain) {
   Ticket* f = new First();
   string seat = f->getSeatNum();
 
-  EXPECT_TRUE(stoi(seat) > 0 && stoi(seat) < 101);
+  EXPECT_TRUE(stoi(seat) > 0 && stoi(seat) < 26);
   EXPECT_DOUBLE_EQ(f->multiplier(), 1.2);
 
   EXPECT_EQ(a.getGenInfo(), "Anchorage Girdwood 12/31/20 9AM Alaska 8.000000 1000.030000");
@@ -105,7 +105,7 @@ TEST(TransportationFactory, FirstClassCruise) {
   Ticket* f = new First();
   string seat = f->getSeatNum();
 
-  EXPECT_TRUE(stoi(seat) > 0 && stoi(seat) < 101);
+  EXPECT_TRUE(stoi(seat) > 0 && stoi(seat) < 26);
   EXPECT_DOUBLE_EQ(f->multiplier(), 1.2);
 
   EXPECT_EQ(a.getGenInfo(), "Florida Bahamas 4/13/21 10AM Princess 14.000000 12000.250000");
@@ -117,7 +117,7 @@ TEST(TransportationFactory, EconomyTicket) {
   Ticket* e = new Economy();
   string seat = e->getSeatNum();
 
-  EXPECT_TRUE(stoi(seat) > 0 && stoi(seat) < 101);
+  EXPECT_TRUE(stoi(seat) > 0 && stoi(seat) < 26);
   EXPECT_DOUBLE_EQ(e->multiplier(), 1.0);
 }
 
@@ -125,11 +125,6 @@ TEST(TransportationFactory, FirstTicket) {
   Ticket* f = new First();
   string seat = f->getSeatNum();
 
-  EXPECT_TRUE(stoi(seat) > 0 && stoi(seat) < 101);
+  EXPECT_TRUE(stoi(seat) > 0 && stoi(seat) < 26);
   EXPECT_DOUBLE_EQ(f->multiplier(), 1.2);
-}
-
-int main(int argc, char **argv) {
-  ::testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
 }
